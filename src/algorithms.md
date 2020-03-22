@@ -1,6 +1,6 @@
 # Algorithms 算法
 
-| Recipe 专题 | Crates 库 | Categories 类目 |
+| Recipe 专题 | Crates 库 | Categories 分类 |
 |--------|--------|------------|
 | [生成随机数][ex-rand] | [![rand-badge]][rand] | [![cat-science-badge]][cat-science] |
 | [生成给定范围随机数][ex-rand-range] | [![rand-badge]][rand] | [![cat-science-badge]][cat-science] |

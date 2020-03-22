@@ -1,58 +1,43 @@
-# About "Cookin' with Rust"
+# 关于 "Cookin' with Rust"
 
-## Table of contents
+## 目录
 
-- [Who this book is for](#who-this-book-is-for)
-- [How to read this book](#how-to-read-this-book)
-- [How to use the recipes](#how-to-use-the-recipes)
-- [A note about error handling](#a-note-about-error-handling)
-- [A note about crate representation](#a-note-about-crate-representation)
+- [这本书是给谁的](#who-this-book-is-for)
+- [如何阅读本书](#how-to-read-this-book)
+- [如何使用书中的专题](#how-to-use-the-recipes)
+- [有关错误处理的注意事项](#a-note-about-error-handling)
+- [关于 crate 的说明](#a-note-about-crate-representation)
 
-## Who this book is for
+## 这本书是给谁的
 
-This cookbook is intended for new Rust programmers, so that they may
-quickly get an overview of the capabilities of the Rust crate
-ecosystem. It is also intended for experienced Rust programmers, who
-should find in the recipes an easy reminder of how to accomplish
-common tasks.
+本书适用于Rust新手程序员，以便他们可以快速了解Rust crate生态系统的功能。对于有经验的Rust程序员，他们也应该能在各个专题中找到如何完成常见任务的简单提示。
 
-## How to read this book
 
-The cookbook [index] contains the full list of recipes, organized into
-a number of sections: "basics", "encoding", "concurrency", etc.  The
-sections themselves are more or less ordered in progression, with
-later sections being more advanced, and occasionally building on
-concepts from earlier sections.
 
-Within the index, each section contains a list of recipes. The recipes
-are simple statements of a task to accomplish, like "generate random
-numbers in a range"; and each recipe is tagged with badges indicating
-which _crates_ they use, like [![rand-badge]][rand], and which
-categories on [crates.io] those crates belong to, like
+## 如何阅读本书
+
+本书的 [index] 索引页包含了所有专题的完整列表， 分为几个部分: "基础", "编码", "并发", 等等.  这些部分本身内部会或多或少地按顺序排列，随后的部分则更高级，并且偶尔会基于前面部分的概念。
+
+在索引中，每个章节部分都包含有一个专题列表，其中有关某个专题要达成之任务的简单说明，例如“生成一定范围内的随机数”；并且每个专题都有一个*徽标*标明其使用的*crate*，如 [![rand-badge]][rand], 并有标明其在 [crates.io] 上的分类, 例如
 [![cat-science-badge]][cat-science].
 
-New Rust programmers should be comfortable reading from the first
-section to the last, and doing so should give one a strong overview of
-the crate ecosystem. Click on the section header in the index, or in
-the sidebar to navigate to the page for that section of the book.
+对于Rust新手来说，按顺序从头至尾阅读是比较适合的，这样做应该能对crate生态系统有一个比较全面的了解。 可以点击在索引页中的章节部分，或者从侧边栏中点击，以导航到该部分进行阅读。
 
-If you are simply looking for the solution to a simple task, the
-cookbook is today more difficult to navigate. The easiest way to find
-a specific recipe is to scan the index looking for the crates and
-categories one is interested in. From there, click on the name of the
-recipe to view it. This will improve in the future.
+如果你只是在寻找某个简单任务解决方案，那么从导航里面寻找需要的专题可能有点难度。更简便的方式，是从索引页中查找你感兴趣的crate和类别，然后点击合适的专题去浏览， 不过后续将会针对这一点改进。
 
-## How to use the recipes
+
+
+## 如何使用书中的专题
+
+专题旨在让你查看可直接用在工作中的代码，每个专题都有详细的解释，并指导你如何获得更多信息。
 
 Recipes are designed to give you instant access to working code, along
 with a full explanation of what it is doing, and to guide you to
 further information.
 
-All recipes in the cookbook are full, self contained programs, so
-that they may be copied directly into your own projects for
-experimentation. To do so follow the instructions below.
+本书中的所有专题都是完整的、自包含的代码程序，因此你可以将它们直接复制到自己的项目中进行试验；为此，请按照以下说明进行操作。
 
-Consider this example for "generate random numbers within a range":
+考虑以下示例以“生成一个范围内的随机数”：
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
@@ -66,8 +51,7 @@ fn main() {
 }
 ```
 
-To work with it locally we can run the following commands to create
-a new cargo project, and change to that directory:
+要在本地使用它，我们可以运行以下命令来创建一个新的cargo项目，并切换到该目录：
 
 
 ```sh
@@ -80,36 +64,32 @@ indicated by the crate badges, in this case just "rand". To do so,
 we'll use the `cargo add` command, which is provided by the
 [`cargo-edit`] crate, which we need to install first:
 
+接着，我们需要将必要的crate添加到[Cargo.toml](http://doc.crates.io/manifest.html)，如专题的crate标志所示，在本例中为“ rand”。为此，我们将使用由[`cargo-edit`] crate 提供的`cargo add`命令，首先需要安装该命令 ：
+
 ```sh
 cargo install cargo-edit
 cargo add rand
 ```
 
-Now you can replace `src/main.rs` with the full contents of the
-example and run it:
+现在，您可以把`src/main.rs`替换为示例的内容并运行它：:
 
 ```sh
 cargo run
 ```
 
-The crate badges that accompany the examples link to the crates' full
-documentation on [docs.rs], and is often the next documentation you
-should read after deciding which crate suites your purpose.
+示例附带的crate徽章会链接到其在[docs.rs](https://docs.rs/)上的完整文档，如果你确定这个crate正是你需要的，那么该文档常常会是你下一步需要阅读的。
 
-## A note about error handling
 
-Error handling in Rust is robust when done correctly, but in today's
-Rust it requires a fair bit of boilerplate. Because of this one often
-sees Rust examples filled with `unwrap` calls instead of proper error
-handling.
 
-Since these recipes are intended to be reused as-is and encourage best
-practices, they set up error handling correctly when there are
-`Result` types involved.
+## 有关错误处理的注意事项
 
-The basic pattern we use is to have a `fn main() -> Result`.
+如果处理得当，Rust的错误处理通常都很可靠。不过在如今的Rust里错误处理都有不少的样板代码要写。因此，经常看到在Rush实例代码中充满了`unwrap` 调用，而不是采用适当的错误处理。
 
-The structure generally looks like:
+由于本书的专题旨在鼓励将它们原汁原味地用于最佳实践中去，因此在涉及`Result` 类型时会正确地设置错误处理。 
+
+我们采用的基本模式是使用 `fn main() -> Result`。
+
+该结构通常如下所示：
 
 ```rust
 #[macro_use]
@@ -140,15 +120,10 @@ fn main() -> Result<()> {
 
 ```
 
-This is using the `error_chain!` macro to define a custom `Error` and
-`Result` type, along with automatic conversions from two standard
-library error types. The automatic conversions make the `?` operator
-work.
+以上例子是使用 `error_chain!` 宏来自定义 `Error` 和
+`Result` 类型, 以及来自标准库中两种错误类型的自动转换，自动转换使`?运算符能够被正确处理。
 
-For the sake of readability error handling boilerplate is hidden by
-default like below.  In order to read full contents click on the
-"expand" (<i class="fa fa-expand"></i>) button located in the top
-right corner of the snippet.
+为了便于阅读，错误处理的样板代码默认情况下是隐藏的，如下所示。要阅读全部内容，请点击"expand" (<i class="fa fa-expand"></i>) 按钮（位于代码段的右上角）。
 
 ```rust
 # #[macro_use]
@@ -174,25 +149,17 @@ fn main() -> Result<()> {
 For more background on error handling in Rust, read [this page of the
 Rust book][error-docs] and [this blog post][error-blog].
 
-## A note about crate representation
+有关Rust中错误处理的更多背景知识，请阅读[Rust书的本页][error-docs]和[这篇文章][error-blog]。
 
-This cookbook is intended eventually to provide expansive coverage of
-the Rust crate ecosystem, but today is limited in scope while we get
-it bootstrapped and work on the presentation. Hopefully, starting
-from a small scope and slowly expanding will help the cookbook become
-a high-quality resource sooner, and allow it to maintain consistent
-quality levels as it grows.
 
-At present the cookbook is focused on the standard library, and on
-"core", or "foundational", crates—those crates that make up the most
-common programming tasks, and that the rest of the ecosystem builds
-off of.
 
-The cookbook is closely tied to the [Rust Libz Blitz], a project to
-identify, and improve the quality of such crates, and so it largely
-defers crate selection to that project. Any crates that have already
-been evaluated as part of that process are in scope for the cookbook,
-as are crates that are pending evaluation.
+## 关于 crate 的说明
+
+本书的终极目标是旨在覆盖大部分的Rust crate生态系统，但自本项目开始启动到呈现至今，所涉及的范围依然有限。我们认为，（以慢打快）由一个小的范围开始慢慢地逐步扩展的方式，有助于保证本项目快速成长为高质量的资源项目，并随着项目内容增长而保持一致的质量水平。
+
+目前，本cookbook主要关注标准库、核心库以及一些基础crate库——这些crate库构建了最常见的编程任务，而其余的crate则建立在这些基础crate库之上。
+
+本项目与 [Rust Libz Blitz] 密切相关，[Rust Libz Blitz] 是用于审查和改进这些crate质量的项目，因此它在很大程度上影响了对crate的选择， 凡是已经进入评估程序的crate都属于本cookbook的选择范围，同时正待评估的crate也同样属于本书选择范围内。 
 
 {{#include links.md}}
 
