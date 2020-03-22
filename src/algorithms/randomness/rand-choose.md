@@ -1,9 +1,8 @@
-## Create random passwords from a set of user-defined characters
+## 根据用户自定义字符创建随机密码
 
 [![rand-badge]][rand] [![cat-os-badge]][cat-os]
 
-Randomly generates a string of given length ASCII characters with custom
-user-defined bytestring, with [`gen_range`].
+根据用户自定义的 bytestring 字节码字符串，使用[`gen_range`] 生成给定长度的ASCII 字符串
 
 ```rust
 extern crate rand;

@@ -1,9 +1,9 @@
-## Create random passwords from a set of alphanumeric characters
+## 根据字母数字创建随机密码
 
 [![rand-badge]][rand] [![cat-os-badge]][cat-os]
 
-Randomly generates a string of given length ASCII characters in the range `A-Z,
-a-z, 0-9`, with [`Alphanumeric`] sample.
+以下是用[`Alphanumeric`] 从 `A-Z,
+a-z, 0-9`中随机生成给定长度的由随机 ASCII字符组成的字符串的例子。
 
 ```rust,ignore
 extern crate rand;
@@ -22,3 +22,4 @@ fn main() {
 ```
 
 [`Alphanumeric`]: https://docs.rs/rand/*/rand/distributions/struct.Alphanumeric.html
+

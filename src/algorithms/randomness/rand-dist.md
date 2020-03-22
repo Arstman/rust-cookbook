@@ -1,15 +1,13 @@
-## Generate random numbers with given distribution
+## 生成给定分布的随机数
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-By default, random numbers have [uniform distribution].
-To generate numbers with other distributions you instantiate a
-distribution, then sample from that distribution using
-[`Distribution::sample`] with help of a random-number
-generator [`rand::Rng`].
+默认情况下，生成的随机数呈 [均匀分布] （译注：也叫”连续均匀分布“）.
+要生成其他分布模型的随机数，请先实例化一个分布, 然后借助随机数生成器 [`rand::Rng`]，利用
+[`Distribution::sample`] 从该分布中采样。
 
-The [distributions available are documented here][rand-distributions]. An example using the
-[`Normal`] distribution is shown below.
+
+ [可选的分布模型在列于此][rand-distributions]. 以下是一个使用[`Normal正态分布`]的例子.
 
 ```
 extern crate rand;

@@ -1,12 +1,8 @@
-## Generate random numbers
+## 生成随机数
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-Generates random numbers with help of random-number
-generator [`rand::Rng`] obtained via [`rand::thread_rng`]. Each thread has an
-initialized generator. Integers are uniformly distributed over the range of the
-type, and floating point numbers are uniformly distributed from 0 up to but not
-including 1.
+利用随机数生成器[`rand::Rng`] 通过 [`rand::thread_rng`]来帮助生成随机数.  每个线程都会单独初始化生成器； 生成的随机整数会在类型范围内均匀分布 （译注：例如u8类型，结果整数会在0-255范围内），浮点数则从0 至1均匀分布，但不包括1。
 
 ```rust
 extern crate rand;
@@ -28,3 +24,4 @@ fn main() {
 
 [`rand::Rng`]: https://docs.rs/rand/*/rand/trait.Rng.html
 [`rand::thread_rng`]: https://docs.rs/rand/*/rand/fn.thread_rng.html
+

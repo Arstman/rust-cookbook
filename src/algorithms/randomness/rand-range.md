@@ -1,8 +1,8 @@
-## Generate random numbers within a range
+## 生成一定范围内的随机数
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-Generates a random value within half-open `[0, 10)` range (not including `10`) with [`Rng::gen_range`].
+使用 [`Rng::gen_range`] 生成一个半开`[0, 10)`区间（不包括`10`）内的随机数
 
 ```rust,ignore
 extern crate rand;
@@ -16,9 +16,7 @@ fn main() {
 }
 ```
 
-[`Uniform`] can obtain values with [uniform distribution].
-This has the same effect, but may be faster when repeatedly generating numbers
-in the same range.
+使用[`Uniform`] 同样可以获得 [均匀分布]的随机值，其效果虽然一样，但在重复生成相同范围内的数字时可能会更快。
 
 ```rust,ignore
 extern crate rand;

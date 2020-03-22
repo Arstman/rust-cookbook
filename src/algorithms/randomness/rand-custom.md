@@ -1,9 +1,9 @@
-## Generate random values of a custom type
+## 生成自定义类型的随机值
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-Randomly generates a tuple `(i32, bool, f64)` and variable of user defined type `Point`.
-Implements the [`Distribution`] trait on type Point for [`Standard`] in order to allow random generation.
+随机生成一个元组`(i32, bool, f64)`和用户定义类型的Point`结构体变量.
+这里需要给 [`Standard`]结构体实现指定Point类型的 [`Distribution`] trait，以便允许随机生成 。
 
 ```rust,ignore
 extern crate rand;
