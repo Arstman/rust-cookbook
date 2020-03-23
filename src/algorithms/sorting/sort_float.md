@@ -1,8 +1,8 @@
-## Sort a Vector of Floats 
+## 浮点数类型Vec排序 
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-A Vector of f32 or f64 can be sorted with [`vec::sort_by`] and [`PartialOrd::partial_cmp`].
+ 元素类型为 f32 或 f64 的vec数组可以用 [`vec::sort_by`] 和 [`PartialOrd::partial_cmp`] 搭配来排序。
 
 ```rust
 fn main() {
@@ -16,3 +16,4 @@ fn main() {
 
 [`vec::sort_by`]: https://doc.rust-lang.org/std/primitive.slice.html#method.sort_by
 [`PartialOrd::partial_cmp`]: https://doc.rust-lang.org/std/cmp/trait.PartialOrd.html#tymethod.partial_cmp
+

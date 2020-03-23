@@ -2,9 +2,7 @@
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-This example sorts a Vector of integers via [`vec::sort`]. Alternative would
-be to use [`vec::sort_unstable`] which can be faster, but does not preserve
-the order of equal elements.
+本示例通过[`vec::sort`] 方法对元素为整数类型的Vector 数组进行排序。也可以选择用 [`vec::sort_unstable`] ，该方法更快，但相等元素在排序之前的原始顺序不会被保留。（译注：即**不稳定排序**）
 
 ```rust
 fn main() {
