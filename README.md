@@ -5,6 +5,12 @@
 
 **[Read it here]**.
 
+
+
+A Rust Cookbook 简体中文版
+
+目前进度： 前2章翻译完毕
+
 This _Rust Cookbook_ is a collection of simple [Rust] examples that
 demonstrate good practices to accomplish common programming tasks,
 using the crates of the Rust ecosystem.

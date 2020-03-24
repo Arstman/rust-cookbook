@@ -2,7 +2,7 @@
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 
-以下示例对含有 `name` 和 `age` 两个属性字段的结构体 Person进行自然排序（按name 和 age属性字段）。要让Person结构体可排序，需要有4个trait： [`Eq`]，[`PartialEq`]， [`Ord`] 和 [`PartialOrd`]。 这些trait只需简单地派生（derived）即可。另外还可以通过提供一个自定义的比较函数给到[`vec:sort_by`] 方法，来仅按age排序。
+以下示例对含有 `name` 和 `age` 两个属性字段的结构体 Person进行自然排序（按name 和 age属性字段）。要让Person结构体可排序，需要有4个trait： [`Eq`]，[`PartialEq`]， [`Ord`] 和 [`PartialOrd`]。 这些trait只需简单地派生（derived）即可。另外还可以通过提供一个自定义的比较函数给到[`vec:sort_by`] 方法，来进行仅基于age的排序。
 
 ```rust
 #[derive(Debug, Eq, Ord, PartialEq, PartialOrd)]

@@ -1,14 +1,16 @@
-## ANSI Terminal
+## ANSI 终端
 
 [![ansi_term-badge]][ansi_term] [![cat-command-line-badge]][cat-command-line]
 
-This program depicts the use of [`ansi_term` crate] and how it is used for controlling colours and formatting, such as blue bold text or yellow underlined text, on ANSI terminals.
+此程序描述了 [`ansi_term` crate] 的用法，以及如何将其应用于控制ANSI 终端上的颜色和格式，例如蓝色粗体文本或黄色带下划线的文本，
 
-There are two main data structures in [`ansi_term`]: [`ANSIString`] and [`Style`]. A [`Style`] holds stylistic information: colours, whether the text should be bold, or blinking, or whatever. There are also Colour variants that represent simple foreground colour styles. An [`ANSIString`] is a string paired with a [`Style`].
+[`ansi_term` crate] 中有两个主要数据结构：[`ANSIString`] 和 [`Style`] 。  [`Style`] 控制样式信息：颜色，文本是粗体，闪烁还是其他， Colour 变量可以简单地用于设置前景颜色样式； [`ANSIString`] 是与 [`Style`] 配对的字符串。
 
-**Note:** British English uses *Colour* instead of *Color*, don't get confused
+注意：英式英语中使用“ ***Colour***”*而不是“ ***Color***”*，不要弄错了。
 
-### Printing colored text to the Terminal
+
+
+### 将彩色文本打印到终端
 
 ```rust
 extern crate ansi_term;
@@ -23,11 +25,9 @@ fn main() {
 }
 ```
 
-### Bold text in Terminal
+### 终端中的粗体
 
-For anything more complex than plain foreground colour changes, the code
-needs to construct `Style` struct. [`Style::new()`] creates the struct,
-and properties chained.
+对于任何比设置普通前景色更复杂的事情，都需要构造 `Style`结构，用 [`Style::new()`] 可以创建此结构并用链式调用来更改属性项。
 
 ```rust
 extern crate ansi_term;
@@ -39,9 +39,9 @@ fn main() {
              Style::new().bold().paint("This is Bold"));
 }
 ```
-### Bold and colored text in terminal
+### 终端中的粗体和彩色文本
 
-`Colour` implements many similar functions as `Style` and can chain methods.
+`Colour` 实现了很多与 `Style` 相似的方法，同样可以链式调用。
 
 ```rust
 extern crate ansi_term;
