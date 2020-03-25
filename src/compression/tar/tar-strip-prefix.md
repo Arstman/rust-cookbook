@@ -1,10 +1,10 @@
-## Decompress a tarball while removing a prefix from the paths
+## 解压缩tarball并去掉路径前缀 
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-Iterate over the [`Archive::entries`].  Use [`Path::strip_prefix`] to remove
-the specified path prefix (`bundle/logs`).  Finally, extract the [`tar::Entry`]
-via [`Entry::unpack`].
+历遍 [`Archive::entries`]， 使用 [`Path::strip_prefix`] 删除指定的路径前缀 (`bundle/logs`)。 最后通过 [`Entry::unpack`] 提取[`tar::Entry`]。
+
+
 
 ```rust,no_run
 # #[macro_use]

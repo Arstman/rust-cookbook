@@ -1,4 +1,4 @@
-## 浮点数类型Vec排序 
+## 浮点数类型Vector排序 
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 

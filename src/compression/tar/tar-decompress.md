@@ -1,11 +1,10 @@
-## Decompress a tarball
+## 解压缩tarball格式
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-Decompress ([`GzDecoder`]) and
-extract ([`Archive::unpack`]) all files from a compressed tarball
-named `archive.tar.gz` located in the current working directory
-to the same location.
+
+
+将位于当前工作目录中名为`archive.tar.gz`的tarball压缩包解压缩 ([`GzDecoder`]) 并提取 ([`Archive::unpack`]) 所有文件。
 
 ```rust,no_run
 extern crate flate2;
@@ -29,3 +28,4 @@ fn main() -> Result<(), std::io::Error> {
 
 [`Archive::unpack`]: https://docs.rs/tar/*/tar/struct.Archive.html#method.unpack
 [`GzDecoder`]: https://docs.rs/flate2/*/flate2/read/struct.GzDecoder.html
+

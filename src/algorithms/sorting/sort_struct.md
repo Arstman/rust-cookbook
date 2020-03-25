@@ -1,4 +1,4 @@
-## 结构体类型Vec排序
+## 结构体类型Vector排序
 
 [![std-badge]][std] [![cat-science-badge]][cat-science]
 

@@ -1,14 +1,11 @@
-## Compress a directory into tarball
+## 将文件夹压缩至tarball
 
 [![flate2-badge]][flate2] [![tar-badge]][tar] [![cat-compression-badge]][cat-compression]
 
-Compress `/var/log` directory into `archive.tar.gz`.
+将 `/var/log` 目录文件夹压缩至 `archive.tar.gz`.
 
-Creates a [`File`] wrapped in [`GzEncoder`]
-and [`tar::Builder`]. </br>Adds contents of `/var/log` directory recursively into the archive
-under `backup/logs`path with [`Builder::append_dir_all`].
-[`GzEncoder`] is responsible for transparently compressing the
-data prior to writing it into `archive.tar.gz`.
+创建一个文件 [`File`] ，并用 [`GzEncoder`] 和 [`tar::Builder`]包裹起来。 </br>Adds contents of `/var/log` directory recursively into the archive
+under `backup/logs`path 使用 [`Builder::append_dir_all`] 将`/var/log` 目录文件夹下的文件递归地添加到位于`backup/logs` 路径下的压缩包文件中，[`GzEncoder`] 负责在数据实际写入`archive.tar.gz`之前压缩数据。
 
 ```rust,no_run
 extern crate tar;
