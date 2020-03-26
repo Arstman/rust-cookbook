@@ -1,13 +1,10 @@
-## Sort a vector in parallel
+## 并行排序 vector
 
 [![rayon-badge]][rayon] [![rand-badge]][rand] [![cat-concurrency-badge]][cat-concurrency]
 
-This example will sort in parallel a vector of Strings.
+此示例将并行对Strings字符串数组（vector ）进行排序。
 
-Allocate a vector of empty Strings. `par_iter_mut().for_each` populates random
-values in parallel.  Although [multiple options]
-exist to sort an enumerable data type, [`par_sort_unstable`]
-is usually faster than [stable sorting] algorithms.
+分配一个空Strings字符串vector，用`par_iter_mut().for_each` 并行填充随机值。 尽管有[多个可选方法]来对可枚举的数据类型进行排序，但并行不稳定（[`par_sort_unstable`]）算法通常比稳定排序（[stable sorting]）算法要快。
 
 ```rust,ignore
 extern crate rand;
@@ -28,5 +25,5 @@ fn main() {
 ```
 
 [`par_sort_unstable`]: https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html#method.par_sort_unstable
-[multiple options]: https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html
+[多个可选方法]: https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html
 [stable sorting]: https://docs.rs/rayon/*/rayon/slice/trait.ParallelSliceMut.html#method.par_sort

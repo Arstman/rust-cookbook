@@ -1,12 +1,10 @@
-## Generate jpg thumbnails in parallel
+## 并行生成 jpg 缩略图
 
 [![rayon-badge]][rayon] [![glob-badge]][glob] [![image-badge]][image] [![cat-concurrency-badge]][cat-concurrency] [![cat-filesystem-badge]][cat-filesystem]
 
-This example generates thumbnails for all .jpg files in the current directory
-then saves them in a new folder called `thumbnails`.
+本示例为当前目录中的所有.jpg文件生成缩略图，然后将其保存在名为`thumbnails`的新文件夹中。
 
-[`glob::glob_with`] finds jpeg files in current directory. `rayon` resizes
-images in parallel using [`par_iter`] calling  [`DynamicImage::resize`].
+[`glob::glob_with`] 用于在当前目录中查找jpeg文件。`rayon` 使用 [`par_iter`] 调用  [`DynamicImage::resize`] 并行地调整图像大小。
 
 ```rust,no_run
 # #[macro_use]

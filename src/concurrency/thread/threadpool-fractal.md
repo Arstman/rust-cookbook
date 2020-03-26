@@ -1,20 +1,17 @@
-## Draw fractal dispatching work to a thread pool
+## 将分形计算工作分配到线程池
 
 [![threadpool-badge]][threadpool] [![num-badge]][num] [![num_cpus-badge]][num_cpus] [![image-badge]][image] [![cat-concurrency-badge]][cat-concurrency][![cat-science-badge]][cat-science][![cat-rendering-badge]][cat-rendering]
 
-This example generates an image by drawing a fractal from the [Julia set]
-with a thread pool for distributed computation.
+本示例通过 [Julia set] 绘制分形来生成图像，利用线程池分配进行分布式计算。
 
 <a href="https://cloud.githubusercontent.com/assets/221000/26546700/9be34e80-446b-11e7-81dc-dd9871614ea1.png"><img src="https://cloud.githubusercontent.com/assets/221000/26546700/9be34e80-446b-11e7-81dc-dd9871614ea1.png" width="150" /></a>
 
-Allocate memory for output image of given width and height with [`ImageBuffer::new`].
-[`Rgb::from_channels`] calculates RGB pixel values.
-Create [`ThreadPool`] with thread count equal to number of cores with [`num_cpus::get`].
-[`ThreadPool::execute`] receives each pixel as a separate job.
+用 [`ImageBuffer::new`]来为给定宽度和高度的输出图像分配内存，[`Rgb::from_channels`] 用于计算 RGB 像素值。
+使用 [`ThreadPool`] 创建的线程数等于通过 [`num_cpus::get`]获取的cpu核数。[`ThreadPool::execute`] 接收每个像素作为单独的作业。
 
-[`mpsc::channel`] receives the jobs and [`Receiver::recv`] retrieves them.
-[`ImageBuffer::put_pixel`] uses the data to set the pixel color.
-[`ImageBuffer::save`] writes the image to `output.png`.
+ [`Receiver::recv`] 接收作业， [`mpsc::channel`] 获取作业。 
+[`ImageBuffer::put_pixel`] 使用数据设置像素颜色。
+[`ImageBuffer::save`] 将图像输出写入`output.png`。
 
 ```rust,no_run
 # #[macro_use]

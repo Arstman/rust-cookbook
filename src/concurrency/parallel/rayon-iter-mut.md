@@ -1,10 +1,8 @@
-## Mutate the elements of an array in parallel
+## 并行修改数组元素
 
 [![rayon-badge]][rayon] [![cat-concurrency-badge]][cat-concurrency]
 
-The example uses the `rayon` crate, which is a data parallelism library for Rust.
-`rayon` provides the [`par_iter_mut`] method for any parallel iterable data type.
-This is an iterator-like chain that potentially executes in parallel.
+该示例使用 `rayon` crate， 这是一个Rust的数据并行计算库。`rayon` 提供 [`par_iter_mut`] 方法用于并行处理任何可迭代的数据类型， 这类似于迭代器的链式调用，但可并行计算。
 
 ```rust
 extern crate rayon;

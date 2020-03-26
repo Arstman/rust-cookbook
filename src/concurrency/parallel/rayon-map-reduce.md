@@ -1,15 +1,10 @@
-## Map-reduce in parallel
+## 并行 Map-reduce
 
 [![rayon-badge]][rayon] [![cat-concurrency-badge]][cat-concurrency]
 
-This example uses [`rayon::filter`], [`rayon::map`], and [`rayon::reduce`]
-to calculate the average age of `Person` objects whose age is over 30.
+本示例使用 [`rayon::filter`]、 [`rayon::map`] 和 [`rayon::reduce`] 来计算集合中年龄超过30 岁的 `Person` 对象的平均年龄。
 
-[`rayon::filter`] returns elements from a collection that satisfy the given
-predicate.  [`rayon::map`] performs an operation on every element, creating a
-new iteration, and [`rayon::reduce`] performs an operation given the previous
-reduction and the current element.  Also shows use of [`rayon::sum`],
-which has the same result as the reduce operation in this example.
+[`rayon::filter`] 从满足给定谓词的集合中返回元素。 [`rayon::map`] 在每个元素上执行一个操作，创建一个新的迭代，并用 [`rayon::reduce`] 在把前面的reduction结果与当前元素执行处理，同时 还展示了使用[`rayon::sum`]的做法，其结果与本示例中使用reduce操作的相同。
 
 ```rust
 extern crate rayon;

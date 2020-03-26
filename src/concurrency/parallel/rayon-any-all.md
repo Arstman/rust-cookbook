@@ -1,8 +1,8 @@
-## Test in parallel if any or all elements of a collection match a given predicate
+## 并行检测集合中的任何或所有元素是否匹配给定谓词
 
 [![rayon-badge]][rayon] [![cat-concurrency-badge]][cat-concurrency]
 
-This example demonstrates using the [`rayon::any`] and [`rayon::all`] methods, which are parallelized counterparts to [`std::any`] and [`std::all`]. [`rayon::any`] checks in parallel whether any element of the iterator matches the predicate, and returns as soon as one is found. [`rayon::all`] checks in parallel whether all elements of the iterator match the predicate, and returns as soon as a non-matching element is found.
+此示例演示了 [`rayon::any`] 和 [`rayon::all`] 方法的用法，该两方法是与标准库中 [`std::any`] 和[`std::all`]相对应的并行方法。 [`rayon::any`] 并行检查迭代器的任何元素是否与谓词匹配，并在找到一个元素后立即返回。[`rayon::all`] 并行检查迭代器的所有元素是否与谓词匹配，并在找到一个不匹配的元素后立即返回。
 
 ```rust
 extern crate rayon;

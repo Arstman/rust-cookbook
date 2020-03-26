@@ -1,12 +1,9 @@
-## Calculate SHA256 sum of iso files concurrently
+## 并发计算  *.iso 的 SHA256 值
 
 [![threadpool-badge]][threadpool] [![num_cpus-badge]][num_cpus] [![walkdir-badge]][walkdir] [![ring-badge]][ring] [![cat-concurrency-badge]][cat-concurrency][![cat-filesystem-badge]][cat-filesystem]
 
-This example calculates the SHA256 for every file with iso extension in the
-current directory. A threadpool generates threads equal to the number of cores
-present in the system found with [`num_cpus::get`].  [`Walkdir::new`] iterates
-the current directory and calls [`execute`] to perform the operations of reading
-and computing SHA256 hash.
+本示例为当前目录中每个具有iso扩展名的文件计算SHA256。线程池生成的线程数量等于使用[`num_cpus::get`] 获取的当前系统cpu核数。 [`Walkdir::new`] 迭代当前目录并调用[`execute`] 执行读取文件并计算SHA256哈希值。
+
 
 ```rust,no_run
 extern crate walkdir;
