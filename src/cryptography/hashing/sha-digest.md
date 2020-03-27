@@ -1,9 +1,8 @@
-## Calculate the SHA-256 digest of a file
+## 计算文件的 SHA-256摘要值
 
 [![ring-badge]][ring] [![data-encoding-badge]][data-encoding] [![cat-cryptography-badge]][cat-cryptography]
 
-Writes some data to a file, then calculates the SHA-256 [`digest::Digest`] of
-the file's contents using [`digest::Context`].
+将一些数据写入文件，然后将文件内容经过[`digest::Context`] 用[`digest::Digest`]  计算出内容的 SHA-256值。 
 
 ```rust
 # #[macro_use]

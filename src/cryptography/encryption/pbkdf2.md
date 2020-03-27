@@ -1,13 +1,10 @@
 <a name="ex-pbkdf2"></a>
-## Salt and hash a password with PBKDF2
+
+## 用PBKDF2 salt 并哈希加密密码
 
 [![ring-badge]][ring] [![data-encoding-badge]][data-encoding] [![cat-cryptography-badge]][cat-cryptography]
 
-Uses [`ring::pbkdf2`] to hash a salted password using the PBKDF2 key derivation
-function [`pbkdf2::derive`].  Verifies the hash is correct with
-[`pbkdf2::verify`]. The salt is generated using
-[`SecureRandom::fill`], which fills the salt byte array with
-securely generated random numbers.
+使用 [`ring::pbkdf2`]的PBKDF2密钥派生函数 [`pbkdf2::derive`]对加盐（salted ）的密码进行哈希（hash ）处理。用 [`pbkdf2::verify`] 验证哈希是否正确。 由 [`SecureRandom::fill`] 生成盐，该方式使用安全生成的随机数填充盐字节数组（salt byte array ）。
 
 ```rust,ignore
 extern crate ring;

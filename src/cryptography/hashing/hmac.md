@@ -1,8 +1,8 @@
-## Sign and verify a message with HMAC digest
+## 用HMAC摘要签名并验签消息
 
 [![ring-badge]][ring] [![cat-cryptography-badge]][cat-cryptography]
 
-Uses [`ring::hmac`] to creates a [`hmac::Signature`] of a string then verifies the signature is correct.
+用 [`ring::hmac`] 创建一个 [`hmac::Signature`] 字符串然后验证签名是否正确。
 
 ```rust
 extern crate ring;
