@@ -1,15 +1,12 @@
-## Using transactions
+## 使用事务（transactions）
 
 [![rusqlite-badge]][rusqlite] [![cat-database-badge]][cat-database]
 
-[`Connection::open`] will open the `cats.db` database from the top recipe.
+[`Connection::open`] 将打开上文所建的 `cats.db` 数据库。
 
-Begin a transaction with [`Connection::transaction`]. Transactions will
-roll back unless committed explicitly with [`Transaction::commit`].
+使用  [`Connection::transaction`] 开启事务（transactions）。除非[`Transaction::commit`]显式标注提交完成（committed）了，否则事务（transactions）将会回滚。
 
-In the following example, colors add to a table having
-a unique constraint on the color name. When an attempt to insert
-a duplicate color is made, the transaction rolls back.
+在以下示例中，将颜色添加到对颜色名称具有唯一性要求约束的表中，如果尝试插入重复的颜色时，事务将回滚。
 
 
 ```rust,no_run

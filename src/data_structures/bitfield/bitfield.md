@@ -1,10 +1,8 @@
-## Define and operate on a type represented as a bitfield
+## 定义表示为位域（bitfield）的类型并对其操作
 
 [![bitflags-badge]][bitflags] [![cat-no-std-badge]][cat-no-std]
 
-Creates type safe bitfield type `MyFlags` with help of [`bitflags!`] macro
-and implements elementary `clear` operation as well as [`Display`] trait for it.
-Subsequently, shows basic bitwise operations and formatting.
+借助 [`bitflags!`] 宏来创建类型安全的位域（bitfield）类型 `MyFlags`，并实现基本的 `clear` 操作及 [`Display`] trait。接着展示了如何对其进行基本的按位运算和格式化。
 
 ```rust
 #[macro_use]

@@ -1,11 +1,10 @@
-## Create a SQLite database
+## 创建 SQLite 数据库
 
 [![rusqlite-badge]][rusqlite] [![cat-database-badge]][cat-database]
 
-Use the `rusqlite` crate to open SQLite databases. See
-[crate][documentation] for compiling on Windows.
+使用 `rusqlite` 创建并打开 SQLite 数据库。有关在Windows上进行编译的信息，请参见 [crate][documentation] 的文档。
 
-[`Connection::open`] will create the database if it doesn't already exist.
+[`Connection::open`] 会打开数据库，如果数据库不存在将会创建一个。
 
 ```rust,no_run
 extern crate rusqlite;

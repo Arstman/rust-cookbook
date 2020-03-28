@@ -1,8 +1,8 @@
-## Insert and Query data
+## 插入和查询数据
 
 [![postgres-badge]][postgres] [![cat-database-badge]][cat-database]
 
-The recipe inserts data into the `author` table using [`execute`] method of `Connection`. Then, displays the data from the `author` table  using [`query`] method of `Connection`.
+本例使用`Connection`的[`execute`] 方法向 `author`表中插入数据，然后用 `Connection`的 [`query`] 方法获取并展示数据。
 
 ```rust,no_run
 extern crate postgres;

@@ -1,8 +1,8 @@
-## Aggregate data
+## 数据汇总
 
 [![postgres-badge]][postgres] [![cat-database-badge]][cat-database]
 
-This recipe lists the nationalities of the first 7999 artists in the database of the [`Museum of Modern Art`] in descending order.
+本例按降序列出[`Museum of Modern Art`]数据库中前7999位艺术家的国籍。 
 
 ```rust,no_run
 extern crate postgres;

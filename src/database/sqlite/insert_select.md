@@ -1,9 +1,8 @@
-## Insert and Select data
+## 插入和选择数据
 
 [![rusqlite-badge]][rusqlite] [![cat-database-badge]][cat-database]
 
-[`Connection::open`] will open the database `cats` created in the earlier recipe.
-This recipe inserts data into `cat_colors` and `cats` tables using the [`execute`] method of `Connection`. First, the data is inserted into the `cat_colors` table. After a record for a color is inserted, [`last_insert_rowid`] method of `Connection` is used to get `id` of the last color inserted. This `id` is used while inserting data into the `cats` table. Then, the select query is prepared using the [`prepare`] method which gives a [`statement`] struct. Then, query is executed using [`query_map`] method of [`statement`].
+本例中，[`Connection::open`] 将打开上文所创建的 `cats` 数据库，用`Connection` 的 [`execute`] 方法向`cat_colors`和`cats`表中插入数据。 首先，将数据插入 `cat_colors` 表中。  插入一条颜色数据之后，使用  `Connection` 的[`last_insert_rowid`] 方法获取最新插入颜色的 `id`值。当插入数据到 `cats` 表时需要用到此`id`。 Then, the select query is prepared using the 然后提供一个 [`statement`]  结构体给到  [`prepare`] 方法来准备选择查询（ select query）， 接着使用[`statement`]的  [`query_map`] 方法去执行查询。
 
 ```rust,no_run
 extern crate rusqlite;
