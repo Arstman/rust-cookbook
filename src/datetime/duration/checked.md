@@ -1,14 +1,12 @@
-## Perform checked date and time calculations
+## 执行检查日期和时间的计算
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-Calculates and displays the date and time two weeks from now using
-[`DateTime::checked_add_signed`] and the date of the day before that using
-[`DateTime::checked_sub_signed`]. The methods return None if the date and time
-cannot be calculated.
+使用 [`DateTime::checked_add_signed`] 计算并显示从现在开始起两周后的日期和时间， 使用[`DateTime::checked_sub_signed`] 计算现在之前一天的日期。
 
-Escape sequences that are available for the
-[`DateTime::format`] can be found at [`chrono::format::strftime`].
+如果时间和日期无法计算，则该方法返回 None 。
+
+[`DateTime::format`] 能用的转义序列项可在 [`chrono::format::strftime`] 里找到。
 
 ```rust
 extern crate chrono;

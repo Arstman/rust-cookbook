@@ -1,17 +1,11 @@
-## Parse string into DateTime struct
+## 将字符串解析到DataTime结构
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-Parses a [`DateTime`] struct from strings representing the well-known formats
-[RFC 2822], [RFC 3339], and a custom format, using
-[`DateTime::parse_from_rfc2822`], [`DateTime::parse_from_rfc3339`], and
-[`DateTime::parse_from_str`] respectively.
+分别使用[`DateTime::parse_from_rfc2822`]，[`DateTime::parse_from_rfc3339`] 或
+[`DateTime::parse_from_str`] ，将常见的 [RFC 2822] 、 [RFC 3339] 格式或是自定义格式的字符串解析为 [`DateTime`] 结构体。
 
-Escape sequences that are available for the [`DateTime::parse_from_str`] can be
-found at [`chrono::format::strftime`]. Note that the [`DateTime::parse_from_str`]
-requires that such a DateTime struct must be creatable that it uniquely
-identifies a date and a time. For parsing dates and times without timezones use
-[`NaiveDate`], [`NaiveTime`], and [`NaiveDateTime`].
+可以在 [`chrono::format::strftime`] 找到 [`DateTime::parse_from_str`] 能用的转义序列项。注意[`DateTime::parse_from_str`] 要求创建的DateTime结构标识出的日期和时间必须唯一（译注：即必须包含时区）。可以用[`NaiveDate`], [`NaiveTime`] 和 [`NaiveDateTime`] 来解析创建无时区的日期和时间。
 
 ```rust
 extern crate chrono;

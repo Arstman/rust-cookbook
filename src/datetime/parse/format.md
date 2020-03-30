@@ -2,10 +2,8 @@
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-Gets and displays the current time in UTC using [`Utc::now`]. Formats the
-current time in the well-known formats [RFC 2822] using [`DateTime::to_rfc2822`]
-and [RFC 3339] using [`DateTime::to_rfc3339`], and in a custom format using
-[`DateTime::format`].
+使用 [`Utc::now`] 获取并显示当前的 UTC 时间， 使用 [`DateTime::to_rfc2822`] 将其格式化为常用的 [RFC 2822]格式， 用 [`DateTime::to_rfc3339`] 格式化为 [RFC 3339] ，或者使用[`DateTime::format`] 来自定义格式化。
+
 
 ```rust
 extern crate chrono;

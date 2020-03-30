@@ -1,11 +1,11 @@
-## Measure the elapsed time between two code sections
+## 测量两段代码之间的经过时间
 
 [![std-badge]][std] [![cat-time-badge]][cat-time]
 
-Measures [`time::Instant::elapsed`] since [`time::Instant::now`].
+用 [`time::Instant::elapsed`] 测量从 [`time::Instant::now`]开始的时长。
 
-Calling [`time::Instant::elapsed`] returns a [`time::Duration`] that we print at the end of the example.
-This method will not mutate or reset the [`time::Instant`] object.
+调用 [`time::Instant::elapsed`] 会返回 [`time::Duration`] ，本例末尾我们会将其打印出来。
+此方法不会更改或重置 [`time::Instant`] 对象。
 
 ```rust
 use std::time::{Duration, Instant};

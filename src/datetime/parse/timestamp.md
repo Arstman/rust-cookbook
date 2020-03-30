@@ -1,10 +1,9 @@
-## Convert date to UNIX timestamp and vice versa
+## 日期与UNIX时间戳相互转换
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-Converts a date given by [`NaiveDate::from_ymd`] and [`NaiveTime::from_hms`]
-to [UNIX timestamp] using [`NaiveDateTime::timestamp`].
-Then it calculates what was the date after one billion seconds
-since January 1, 1970 0:00:00 UTC, using [`NaiveDateTime::from_timestamp`].
+使用 [`NaiveDateTime::timestamp`] 把由 [`NaiveDate::from_ymd`] 和 [`NaiveTime::from_hms`] 指定的日期转换为[UNIX timestamp] 时间戳。
+
+然后使用 [`NaiveDateTime::from_timestamp`] 计算 January 1, 1970 0:00:00 UTC 起十亿秒之后的日期。
 
 ```rust
 extern crate chrono;

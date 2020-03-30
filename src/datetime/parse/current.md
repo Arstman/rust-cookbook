@@ -1,9 +1,9 @@
-## Examine the date and time
+## 检查日期和时间
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-Gets the current UTC [`DateTime`] and its hour/minute/second via [`Timelike`]
-and its year/month/day/weekday via [`Datelike`].
+通过获取当前UTC的 [`DateTime`] ， 通过 [`Timelike`] 获取其中的小时/分钟/秒，
+通过 [`Datelike`] 获取年/月/日/周。
 
 ```rust
 extern crate chrono;
