@@ -1,14 +1,10 @@
-## Parse and increment a version string.
+## 解析版本字符串并递增版本号
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-Constructs a [`semver::Version`] from a string literal using [`Version::parse`],
-then increments it by patch, minor, and major version number one by one.
+使用 [`Version::parse`] 从一个字面量字符串构造一个[`semver::Version`], 然后依递增主版本号.次版本号.修订号。
 
-Note that in accordance with the [Semantic Versioning Specification],
-incrementing the minor version number resets the patch version number to 0 and
-incrementing the major version number resets both the minor and patch version
-numbers to 0.
+请注意，根据[语义化版本规范], 递增次要版本号会将补丁版本号重置为0，而递增主要版本号则会将次要版本号和补丁版本号都重置为0。
 
 ```rust
 extern crate semver;
@@ -48,4 +44,4 @@ fn main() -> Result<(), SemVerError> {
 [`semver::Version`]: https://docs.rs/semver/*/semver/struct.Version.html
 [`Version::parse`]: https://docs.rs/semver/*/semver/struct.Version.html#method.parse
 
-[Semantic Versioning Specification]: http://semver.org/
+[语义化版本规范]: http://semver.org/
