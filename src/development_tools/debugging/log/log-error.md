@@ -1,9 +1,8 @@
-## Log an error message to the console
+## 将错误信息记录到控制台
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-Proper error handling considers exceptions exceptional.  Here, an error logs
-to stderr with `log`'s convenience macro [`error!`].
+正确的错误处理将异常视为例外。  这里介绍一个将错误记录到 stderr 的`log` 宏[`error!`]。
 
 ```rust
 #[macro_use]

@@ -1,8 +1,8 @@
-## Log to stdout instead of stderr
+## 将日志输出到stdout 而不是 stderr
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-Creates a custom logger configuration using the [`Builder::target`] to set the target of the log output to [`Target::Stdout`].
+使用[`Builder::target`] 来创建自定义的日志记录器配置，并将输出目的设置为[`Target::Stdout`]。
 
 ```rust
 #[macro_use]

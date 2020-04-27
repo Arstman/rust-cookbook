@@ -1,10 +1,8 @@
-## Log a debug message to the console
+## 将调试消息记录到控制台
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-The `log` crate provides logging utilities. The `env_logger` crate configures
-logging via an environment variable.  The [`debug!`] macro works like other
-[`std::fmt`] formatted strings.
+`log` crate 提供了记录日志的工具， `env_logger` crate 则通过环境变量来配置日志生成。 [`debug!`] 宏用作格式化字符串,与标准库中的[`std::fmt`] 类似。
 
 ```rust
 #[macro_use]
@@ -22,17 +20,14 @@ fn main() {
 }
 ```
 
-No output prints when running this code. By default, the
-log level is `error`, and any lower levels are dropped.
-
-Set the `RUST_LOG` environment variable to print the message:
+运行此代码时不会有任何输出，默认情况下日志级别error， 任何较低级别的都将被删除。
+设置 `RUST_LOG` 环境变量以打印消息:
 
 ```
 $ RUST_LOG=debug cargo run
 ```
 
-Cargo prints debugging information then the
-following line at the very end of the output:
+这样Cargo会打印调试信息，然后在输出的最后一行显示以下行：
 
 ```
 DEBUG:main: Executing query: DROP TABLE students
