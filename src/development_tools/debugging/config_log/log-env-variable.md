@@ -1,13 +1,11 @@
-## Use a custom environment variable to set up logging
+## 使用自定义环境变量设置日志记录
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-[`Builder`] configures logging.
+使用 [`Builder`] 设置日志记录.
 
-[`Builder::parse`] parses `MY_APP_LOG`
-environment variable contents in the form of [`RUST_LOG`] syntax.
-Then, [`Builder::init`] initializes the logger.
-All these steps are normally done internally by [`env_logger::init`].
+[`Builder::parse`]用 [`RUST_LOG`]语法的形式来分析环境变量`MY_APP_LOG`的内容.
+然后由 [`Builder::init`] 来初始化记录器, 所有这些步骤一般都是在[`env_logger::init`] 内完成.
 
 ```rust
 #[macro_use]

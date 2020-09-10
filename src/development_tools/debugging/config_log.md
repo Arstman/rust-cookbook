@@ -1,4 +1,4 @@
-# Configure Logging
+# 配置日志记录
 
 {{#include config_log/log-mod.md}}
 

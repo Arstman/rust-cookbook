@@ -1,9 +1,8 @@
-## Enable log levels per module
+## 为每个模块启用日志级别
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-Creates two modules `foo` and nested `foo::bar` with logging directives
-controlled separately with [`RUST_LOG`] environmental variable.
+创建两个嵌套模块`foo` 和`foo::bar` , 为它们设置单独的[`RUST_LOG`] 日志环境变量. 
 
 ```rust
 #[macro_use]
@@ -36,16 +35,14 @@ fn main() {
 }
 ```
 
-[`RUST_LOG`] environment variable controls [`env_logger`][env_logger] output.
-Module declarations take comma separated entries formatted like
-`path::to::module=log_level`. Run the `test` application as follows:
+[`RUST_LOG`] 环境变量控制着 [`env_logger`][env_logger] 输出. 
+如以下运行 `test`程序的命令所示, 每个模块的变量声明是形如 `path::to::module=log_level`的条目, 用逗号分隔 :
 
 ```bash
 RUST_LOG="warn,test::foo=info,test::foo::bar=debug" ./test
 ```
 
-Sets the default [`log::Level`] to `warn`, module `foo` and module `foo::bar`
-to `info` and `debug`.
+本例子将 [`log::Level`] 设置为 `warn`, 模块 `foo` 和模块 `foo::bar` 则分别设置为 `info` 和 `debug`.
 
 ```bash
 WARN:test: [root] warn

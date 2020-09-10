@@ -1,15 +1,12 @@
-## Log messages to a custom location
+## 将消息记录到自定义位置
 
 [![log-badge]][log] [![log4rs-badge]][log4rs] [![cat-debugging-badge]][cat-debugging]
 
-[log4rs] configures log output to a custom location. [log4rs] can use either an
-external YAML file or a builder configuration.
+[log4rs] 可以设置将日志输出到自定义的位置. [log4rs] 可以使用外部的 YAML 文件或内置的builder来生成配置.
 
-Create the log configuration with [`log4rs::append::file::FileAppender`]. An
-appender defines the logging destination.  The configuration continues with
-encoding using a custom pattern from [`log4rs::encode::pattern`].
-Assigns the configuration to [`log4rs::config::Config`] and sets the default
-[`log::LevelFilter`].
+使用[`log4rs::append::file::FileAppender`]来创建配置, appender定义日志记录的位置.  The configuration continues with
+encoding using a custom pattern from 然后使用 [`log4rs::encode::pattern`] 自定义模式来编码, 使用[`log4rs::config::Config`]指派配置, 使用
+[`log::LevelFilter`] 来设置默认的日志级别.
 
 ```rust,no_run
 # #[macro_use]

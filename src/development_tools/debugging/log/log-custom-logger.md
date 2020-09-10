@@ -1,10 +1,9 @@
-## Log messages with a custom logger
+## 自定义日志记录器记录消息
 
 [![log-badge]][log] [![cat-debugging-badge]][cat-debugging]
 
-Implements a custom logger `ConsoleLogger` which prints to stdout.
-In order to use the logging macros, `ConsoleLogger` implements
-the [`log::Log`] trait and [`log::set_logger`] installs it.
+实现一个自定义的, 可以输出打印到标准输出(stdout)的日志记录器`ConsoleLogger`, 为了可以使用日志宏, 
+`ConsoleLogger` 实现了 [`log::Log`] trait, 并用 [`log::set_logger`] 将其装入.
 
 ```rust
 #[macro_use]

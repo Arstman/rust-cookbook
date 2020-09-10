@@ -1,11 +1,9 @@
-## Log to the Unix syslog
+## 记录至Unix系统日志
 
 [![log-badge]][log] [![syslog-badge]][syslog] [![cat-debugging-badge]][cat-debugging]
 
-Logs messages to [UNIX syslog]. Initializes logger backend
-with [`syslog::init`]. [`syslog::Facility`] records the program submitting
-the log entry's classification, [`log::LevelFilter`] denotes allowed log verbosity
-and `Option<&str>` holds optional application name.
+将日志信息记录到 [UNIX syslog]. 首先使用[`syslog::init`]进行初始化, 然后利用[`syslog::Facility`] 记录程序提交的日志消息条目, 并将其分类;
+[`log::LevelFilter`] 用于设置允许的日志记录详细粒度, 而 `Option<&str>` 选项用于保留程序名.
 
 ```rust
 #[macro_use]

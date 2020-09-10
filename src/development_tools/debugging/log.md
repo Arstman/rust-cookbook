@@ -1,4 +1,4 @@
-# Log Messages
+# 记录日志消息
 
 {{#include log/log-debug.md}}
 

@@ -1,14 +1,11 @@
-## Include timestamp in log messages
+## 在日志消息中包含时间戳 
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![chrono-badge]][chrono] [![cat-debugging-badge]][cat-debugging]
 
-Creates a custom logger configuration with [`Builder`].
-Each log entry calls [`Local::now`] to get the current [`DateTime`] in local
-timezone and uses [`DateTime::format`] with [`strftime::specifiers`] to format
-a timestamp used in the final log.
+使用[`Builder`]创建自定义配置的日志记录器, 
+每个日志条目都使用 [`Local::now`] 来获取当地时间的 [`DateTime`] 并使用 [`DateTime::format`] 和 [`strftime::specifiers`] 格式化成日志中最终使用的时间戳.
 
-The example calls [`Builder::format`] to set a closure which formats each
-message text with timestamp, [`Record::level`] and body ([`Record::args`]).
+本例调用 [`Builder::format`] 设置一个闭包来格式化每个消息文本, 输出为 时间戳 消息级别 [`Record::level`] 和消息体 ([`Record::args`]).
 
 ```rust
 #[macro_use]
@@ -39,7 +36,7 @@ fn main() {
     debug!("debug");
 }
 ```
-stderr output will contain
+标准错误输出 stderr 将会输出如下: 
 ```
 2017-05-22T21:57:06 [WARN] - warn
 2017-05-22T21:57:06 [INFO] - info
